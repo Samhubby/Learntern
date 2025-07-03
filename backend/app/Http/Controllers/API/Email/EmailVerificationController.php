@@ -25,7 +25,7 @@ class EmailVerificationController extends BaseController
                 return $this->sendResponse(null, 'Email is already verified.');
             }
 
-            $redirectURL = "http://localhost:3000/email-verified";
+            $redirectURL = "http://localhost/email-verified";
             return redirect($redirectURL);
         } catch (\Exception $e) {
             return $this->sendError('An error occurred during verification.', $e->getMessage(), 500);

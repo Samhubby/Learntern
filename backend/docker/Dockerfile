@@ -30,4 +30,6 @@ COPY ./docker/php/local.ini /usr/local/etc/php/conf.d/local.ini
 
 RUN mkdir -p /var/log/supervisor
 
+EXPOSE 9000
+
 CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
